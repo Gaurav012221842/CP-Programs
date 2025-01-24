@@ -3,21 +3,19 @@ import java.util.List;
 
 class NQueen {
 
-    // Function to check if we can place a queen at position (row, col)
+     
     static boolean canwego(int row, int col, int n, List<String> grid) {
-        // Check for queens in the same column
+         
         for (int i = row - 1; i >= 0; i--) {
             if (grid.get(i).charAt(col) == 'Q') {
                 return false;
             }
-        }
-        // Check for queens on the upper-left diagonal
+        } 
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (grid.get(i).charAt(j) == 'Q') {
                 return false;
             }
-        }
-        // Check for queens on the upper-right diagonal
+        } 
         for (int i = row - 1, j = col + 1; i >= 0 && j < n; i--, j++) {
             if (grid.get(i).charAt(j) == 'Q') {
                 return false;
@@ -25,8 +23,7 @@ class NQueen {
         }
         return true;
     }
-    static void  f(int row, int n, List<String> grid, List<List<String>> result) {
-        // If all queens are placed
+    static void  f(int row, int n, List<String> grid, List<List<String>> result) { 
         if (row == n) {
             result.add(new ArrayList<>(grid));
             return;
@@ -71,5 +68,11 @@ class NQueen {
         }
         System.out.println(solutions.size());
     }
+    //OTHER METHODS ----------------------------------------------------------------
+    // Other methods to solve the N-Queens problem can be added here
+    // row array of size=row;
+    // mid diagonal of size=row+n-1-col;
+    // sc of size=row+col;
+
 }
 
