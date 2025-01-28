@@ -6,10 +6,8 @@ public class subsets {
         int[] arr={1,2,3};
         List<List<Integer>> subsets = call(arr);
         System.out.println(subsets);
-
     }
     public static List<List<Integer>> call(int[] nums) {
-       
         helper(nums, 0, new ArrayList<>());
         return res;
     }
@@ -20,6 +18,5 @@ public class subsets {
             helper(nums, i+1, curr);
             curr.remove(curr.size()-1);
         }
-    
     }
 }
