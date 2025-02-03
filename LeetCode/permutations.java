@@ -35,4 +35,6 @@ public class permutations {
             System.out.println(x);
         }
     }
+    //No of substring in string is 
+    
 }

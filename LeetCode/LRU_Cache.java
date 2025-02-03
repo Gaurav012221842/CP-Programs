@@ -12,9 +12,7 @@ class LRUCache{
     private int capacity;
     private Map<Integer,Node> cache;
     private Node head;
-    private Node tail;
-    
-
+    private Node tail; 
     public LRUCache(int capacity){
         this.capacity=capacity;
         this.cache=new HashMap<>();
@@ -23,7 +21,6 @@ class LRUCache{
         this.head.next=this.tail;
         this.tail.prev=this.head;
     }
-
     public int get(int key){
         if(!cache.containsKey(key)){
             return -1;
@@ -59,8 +56,7 @@ class LRUCache{
         node.prev = head;
         node.next = nextNode;
         nextNode.prev = node;
-    }
-    
+    }   
 }
 public class LRU_Cache {
    public static void main(String[] args) {

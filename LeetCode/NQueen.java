@@ -1,11 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
-
-class NQueen {
-
-     
-    static boolean canwego(int row, int col, int n, List<String> grid) {
-         
+class NQueen { 
+    static boolean canwego(int row, int col, int n, List<String> grid) { 
         for (int i = row - 1; i >= 0; i--) {
             if (grid.get(i).charAt(col) == 'Q') {
                 return false;
@@ -38,8 +34,7 @@ class NQueen {
                 grid.set(row, new String(charArray));
             }
         }
-    }
-    // Main function to solve the N-Queens problem
+    } 
     public static List<List<String>> solveNQueens(int n) {
         List<List<String>> result = new ArrayList<>();
         List<String> grid = new ArrayList<>();
