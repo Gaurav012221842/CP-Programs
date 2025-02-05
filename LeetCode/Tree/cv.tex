@@ -1,0 +1,300 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+% ---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Gaurav Kumar} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:6203876025}{+91 6203876025}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:gaurav94174@gmail.com}{gaurav94174@gmail.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/gaurav94/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/Gaurav012221842}{GitHub}
+    $|$
+    % \faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
+    $|$
+    \faMapMarker \hspace{.5pt} \href{ }{Phagwara, Punjab}
+\end{center}
+
+
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    
+    \resumeEducationHeading
+      {Lovely Professional University
+      % \normalfont{(Admission rate: 0.09\%)}
+      }{Phagwara, Punjab}
+      {B.tech. in Computer Science;   \textbf{CGPA: 7.84 }}{Sep 2022 \textbf{--} Jun 2026}
+      {M.B.B.L College Muzaffarpur;
+      \textbf{Percentage: 86}}{Oct 2019 \textbf{--} Jun 2021}
+       
+    
+  \resumeSubHeadingListEnd
+
+
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        
+        \textbf{Languages:}{ C/C++, Java, Python, JavaScript, SQL, Swift,Kotlin, } \\ \vspace{3pt}
+        
+        \textbf{Technologies:}{   Node.js, React.js, Express.js, MySQL, MongoDB, Git,  Docker, AWS} \\ \vspace{3pt}
+        
+        \textbf{Methodologies:}{  OOP, Functional Programming} \\ \vspace{3pt}
+        
+    }}
+  \resumeSubHeadingListEnd
+
+
+
+%----------- EXPERIENCE -----------
+
+\section{Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Cipher Schools}{Phagwara, Punjab}
+      {Summer Intern}{Jun 2024 \textbf{--} August 2024}
+        \resumeItemListStart
+            \resumeItem{Developed a feature-rich Notes Maker application using React.js for UI handling.}
+             
+            \resumeItem{Integrated search and filtering functionality to enhance user experience.Optimized app performance with lazy loading and efficient database queries.}
+             
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Saitech Computers}{Muzaffarpur, Bihar}
+      {Computer Teacher – Basic Coding Instructor
+}{Sep 2023 \textbf{--} Nov 2024,Part Time}
+        \resumeItemListStart
+            
+            \resumeItem{Taught block-based coding (e.g., Scratch) and text-based programming (Python, Java) to develop logical thinking.}
+            \resumeItem{Designed hands-on activities, mini-projects, and coding challenges to reinforce learning.
+Simplified complex concepts like loops, conditionals, and algorithms through real-world examples.
+Encouraged problem-solving skills through game development, animations, and robotics projects.}
+        \resumeItemListEnd
+ 
+  \resumeSubHeadingListEnd
+
+
+
+
+
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+        {\textbf{Slack Message Clone} $|$ \emph{\href{https://github.com/Gaurav012221842/MessageSlack-Backend}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a Slack-like full-stack application with real-time messaging (WebSockets, Socket.io), secure authentication (JWT, OAuth), role-based access control, channel-based communication, file sharing, emoji reactions, a subscription-based payment system (Stripe/PayPal), automated invoicing, and scalable deployment (Docker, AWS/GCP) for a seamless user experience.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{ImageGram (Insta Clone)} $|$ \emph{\href{https://github.com/Gaurav012221842/imgGram}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Developed an Instagram clone (ImageGram) with user authentication (JWT, OAuth), secure login/signup, real-time post uploads, likes, comments, and sharing features, built using Node.js, Express.js, AWS S3 (for image storage), MongoDB, WebSockets, and React, ensuring a scalable and seamless user experience.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{CryptoTracker} $|$ \emph{\href{https://github.com/Gaurav012221842/CryptoTracker}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Developed CryptoTracker, a web app that displays a real-time cryptocurrency table with search functionality, market rank, and a dark/light mode switch, allowing users to view detailed coin charts (1D, 7D, 30D, 365D) and convert prices between INR and USD, built using React, Next.js, Chart.js, REST APIs, and Tailwind CSS for a seamless user experience.}
+          \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{HangMan Game} $|$ \emph{\href{https://github.com/Gaurav012221842/HangMan}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a Hangman word-guessing game using JavaScript, React, and Tailwind CSS, where the player gets a hint from the computer and 7 chances to guess the correct word before losing, featuring dynamic UI updates, interactive gameplay, and responsive design for an engaging user experience.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+% %----------- AWARDS & ACHIEVEMENTS -----------
+
+% \section{Awards \& Achievements}
+%   \vspace{2pt}
+%   \resumeSubHeadingListStart
+%     \small{\item{
+%         \textbf{High Honors Degree:}{ Awarded to Bachelor alumni who have graduated with a GPA greater than or equal to 3.50 by Boğaziçi University. (Jul 2023)} \\ \vspace{3pt}
+
+%         \textbf{TÜBİTAK 2247-C Intern Researcher Scholarship:}{ Awarded to students who take part in research projects carried out by the Scientific and Technological Research Council of Turkey (TÜBİTAK). (Dec 2021 \textbf{--} Jun 2022)} \\ \vspace{3pt}
+    
+%         % \textbf{National University Admission Exam (YKS):}{ Ranked $75^{th}$ in Mathematics and Science among ca. 2.3 million candidates with a test score of 489.92/500. (Jul 2018)} \\ \vspace{3pt}
+        
+%         \textbf{KYK Outstanding Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Higher Education Credit and Hostels Institution (KYK). (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
+        
+%         % \textbf{Boğaziçi University Success Scholarship:}{ Awarded to students who have been ranked in the top 100 on National University Admission Exam by Boğaziçi University. (Sep 2018 \textbf{--} Jun 2023)} \\ \vspace{3pt}
+        
+%         \textbf{Kocaeli Science High School Valedictorian Award:}{ Graduated as the highest ranked student. (Jun 2018)}
+%     }}
+%   \resumeSubHeadingListEnd
+ 
+
+\section{Certificates}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Generative Al with Large Language Models (01/2024-07-2024)           (CourseEra)} \\ \vspace{3pt} 
+        
+        \textbf{Introduction to Large Language Models (01/2024-07-2024)(CourseEra)} 
+    }}
+  \resumeSubHeadingListEnd
+
+
+ 
+ 
+
+\section{Hobbies}
+  \resumeSubHeadingListStart
+    \small{\item\textbf{Cricket, Badminton, Fitness, Chess}}
+  \resumeSubHeadingListEnd
+
+
+ 
+
+
+%-------------------------------------------
+\end{document}
