@@ -371,6 +371,26 @@ public class Traversal {
         root.right = helper(pre, i, high); 
         return root;
     }
+    static class Pair{
+        TreeNode node;
+        int idx;
+        public Pair(TreeNode node,int idx){
+            this.node=node;
+            this.idx=idx;
+        }
+    }
+    public static int minCameraCover(TreeNode root) {
+       return f(root,0);
+    }
+    static int anss=-1;
+    public static int f(TreeNode node, int parent) {
+        if(node==null)return 0;
+        anss=f(node.left,1)+f(node.right,1)+1;
+        if(parent==1){
+            anss=Math.min(ans,f(node.left,0)+f(node.right,0));
+        }
+        return anss;
+    }
     public static void deleteNodeInBST(TreeNode root,int val){
         if(root==null)return;
         if(root.val>val){
@@ -396,6 +416,28 @@ public class Traversal {
             }
         }
     }
+    //Design BST LeetCode 173
+    class BSTIterator {
+        Stack<TreeNode>st=new Stack<>();
+        public BSTIterator(TreeNode root) {
+            pushAll(root);
+        }
+        
+        public int next() {
+            TreeNode temp=st.pop();
+            pushAll(temp.right);
+            return temp.val;
+            
+        }
+        
+        public boolean hasNext() {
+            return !st.isEmpty();
+        }
+        public void pushAll(TreeNode node ){
+            for(;node!=null;st.add(node),node=node.left);
+        }
+    }
+    
     
 
 }

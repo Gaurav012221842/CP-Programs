@@ -1,56 +1,50 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 public class Main {
-    static long[][][][] dp;
-
+    static int n;
+    static ArrayList<Integer>[] adjList; 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        long f = sc.nextLong(); // Use nextLong() instead of nextInt()
-        long s = sc.nextLong();
-
-        String high = Long.toString(s);
-        String low = Long.toString(f - 1);
-
-        dp = new long[high.length()][2][11][2]; // Use long[][][][] to store large values
-        for (long[][][] d1 : dp) {
-            for (long[][] d2 : d1) {
-                for (long[] d3 : d2) {
-                    Arrays.fill(d3, -1);
-                }
-            }
-        }
-        long highCount = count(0, 1, high, -1, 1);
-
-        dp = new long[low.length()][2][11][2]; // Reset DP for the low count
-        for (long[][][] d1 : dp) {
-            for (long[][] d2 : d1) {
-                for (long[] d3 : d2) {
-                    Arrays.fill(d3, -1);
-                }
-            }
-        }
-        long lowCount = count(0, 1, low, -1, 1);
-
-        System.out.println(highCount - lowCount);
+        n = sc.nextInt(); 
+        adjList = new ArrayList[n + 1];
+        for (int i = 1; i <= n; i++) {
+            adjList[i] = new ArrayList<>();
+        } 
+        for (int i = 0; i < n - 1; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            adjList[a].add(b);
+            adjList[b].add(a);
+        } 
+        int farthestNode = bfs(1)[1]; 
+        int diameter = bfs(farthestNode)[0]; 
+        System.out.println(diameter);
     }
+    static int[] bfs(int start) {
+        ArrayDeque<Integer> queue = new ArrayDeque<>();
+        int[] dist = new int[n + 1];
+        boolean[] visited = new boolean[n + 1];  
 
-    public static long count(int idx, int tight, String str, int prev, int leadingZero) {
-        if (idx >= str.length())
-            return 1;
+        queue.add(start);
+        visited[start] = true;
+        dist[start] = 0;
+        int farthestNode = start, maxDist = 0;
 
-        if (dp[idx][tight][prev + 1][leadingZero] != -1)
-            return dp[idx][tight][prev + 1][leadingZero];
-
-        char up = tight == 1 ? str.charAt(idx) : '9';
-        long ans = 0;
-
-        for (char ch = '0'; ch <= up; ch++) {
-            int digit = ch - '0';
-            if (leadingZero == 1 || digit != prev) {
-                ans += count(idx + 1, tight & (ch == up ? 1 : 0), str, digit, leadingZero & (ch == '0' ? 1 : 0));
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            for (int neighbor : adjList[node]) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    dist[neighbor] = dist[node] + 1;
+                    queue.add(neighbor);
+                    if (dist[neighbor] > maxDist) {
+                        maxDist = dist[neighbor];
+                        farthestNode = neighbor;
+                    }
+                }
             }
         }
-        return dp[idx][tight][prev + 1][leadingZero] = ans;
+
+        return new int[]{maxDist, farthestNode}; 
     }
 }
