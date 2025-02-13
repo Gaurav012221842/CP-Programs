@@ -195,6 +195,14 @@ public class Traversal {
         return res;
         
     }
+    public static List<Integer> LeafNodes(TreeNode root){
+        List<Integer> res=new ArrayList<>();
+        if(root==null)return res;
+        if(root.left==null && root.right==null)res.add(root.val);
+        LeafNodes(root.left);
+        LeafNodes(root.right);
+        return res;
+    }
     
     public static List<Integer> rightSideView(TreeNode root) {
         List<Integer>ls=new ArrayList<>();

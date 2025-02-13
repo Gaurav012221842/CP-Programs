@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Pata {
     static int n;
     static ArrayList<Integer>[] adjList; 
     public static void main(String[] args) {
